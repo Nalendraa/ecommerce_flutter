@@ -1,8 +1,34 @@
+import 'dart:convert';
+
 import 'package:ecommerce/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:http/http.dart' as http;
+import "package:ecommerce/config.dart" as config;
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  // Map data = {0: 0};
+  // Future<String> getdata() async {
+  //   var datares = await http.post(Uri.parse(config.BaseUrl + "api/login"),
+  //       body: {"email": "ron@gmail.com", "password": "ron"});
+  //   setState(() {
+  //     data = json.decode(datares.body);
+  //   });
+  //   return "oke";
+  // }
+
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   getdata();
+  // }
+
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -12,7 +38,8 @@ class SignInPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Login',
+              //
+              "Sign In",
               style: primaryTextStyle.copyWith(
                 fontSize: 24,
                 fontWeight: semiBold,

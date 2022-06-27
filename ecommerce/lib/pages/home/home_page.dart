@@ -1,6 +1,11 @@
 import 'package:ecommerce/theme.dart';
 import 'package:ecommerce/widgets/product_card.dart';
+import 'package:ecommerce/widgets/product_card2.dart';
+import 'package:ecommerce/widgets/product_card3.dart';
 import 'package:ecommerce/widgets/product_tile.dart';
+import 'package:ecommerce/widgets/product_tile2.dart';
+import 'package:ecommerce/widgets/product_tile3.dart';
+import 'package:ecommerce/widgets/product_tile4.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -132,7 +137,7 @@ class HomePage extends StatelessWidget {
                   color: transparentColor,
                 ),
                 child: Text(
-                  'Monitor',
+                  'Headset',
                   style: subtitleTextStyle.copyWith(
                     fontSize: 14,
                     fontWeight: medium,
@@ -198,8 +203,8 @@ class HomePage extends StatelessWidget {
               Row(
                 children: [
                   ProductCards(),
-                  ProductCards(),
-                  ProductCards(),
+                  ProductCards2(),
+                  ProductCards3(),
                 ],
               )
             ],
@@ -233,9 +238,9 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             ProductTile(),
-            ProductTile(),
-            ProductTile(),
-            ProductTile(),
+            ProductTile2(),
+            ProductTile3(),
+            ProductTile4(),
           ],
         ),
       );

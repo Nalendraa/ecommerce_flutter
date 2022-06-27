@@ -1,8 +1,7 @@
+import 'package:ecommerce/theme.dart';
 import 'package:flutter/material.dart';
 
-import '../theme.dart';
-
-class ProductTile extends StatelessWidget {
+class ProductCards3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -10,50 +9,54 @@ class ProductTile extends StatelessWidget {
         Navigator.pushNamed(context, '/product');
       },
       child: Container(
-        margin: EdgeInsets.only(
-          left: defaultMargin,
-          right: defaultMargin,
-          bottom: defaultMargin,
+        width: 215,
+        height: 278,
+        margin: EdgeInsets.only(right: defaultMargin),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Color(0xFFFFFFFF),
         ),
-        child: Row(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                'assets/image_vga.png',
-                width: 120,
-                height: 120,
-                fit: BoxFit.cover,
-              ),
-            ),
             SizedBox(
-              width: 12,
+              height: 30,
             ),
-            Expanded(
+            Image.asset(
+              'assets/image_mouse.png',
+              width: 215,
+              height: 150,
+              fit: BoxFit.cover,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Processor',
+                    'Mouse',
                     style: secondaryTextStyle.copyWith(
                       fontSize: 12,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  Text(
-                    'Intel Core 7 10thGen',
-                    style: primaryTextStyle.copyWith(
-                      fontSize: 16,
-                      fontWeight: semiBold,
                     ),
                   ),
                   SizedBox(
                     height: 6,
                   ),
                   Text(
-                    '\$275,70',
+                    'Razer Viper Ultralight Ambidextrous',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: semiBold,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Text(
+                    '\$149,95',
                     style: priceTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: semiBold,
@@ -61,7 +64,7 @@ class ProductTile extends StatelessWidget {
                   )
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

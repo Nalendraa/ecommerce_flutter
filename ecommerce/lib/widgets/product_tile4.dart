@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme.dart';
 
-class ProductTile extends StatelessWidget {
+class ProductTile4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,7 +20,7 @@ class ProductTile extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
-                'assets/image_vga.png',
+                'assets/image_laptop2.png',
                 width: 120,
                 height: 120,
                 fit: BoxFit.cover,
@@ -34,7 +34,7 @@ class ProductTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Processor',
+                    'Laptop',
                     style: secondaryTextStyle.copyWith(
                       fontSize: 12,
                     ),
@@ -43,7 +43,7 @@ class ProductTile extends StatelessWidget {
                     width: 6,
                   ),
                   Text(
-                    'Intel Core 7 10thGen',
+                    'ASUS ROG ZYPHYRUS G17',
                     style: primaryTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: semiBold,
@@ -53,7 +53,7 @@ class ProductTile extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    '\$275,70',
+                    '\$2054,70',
                     style: priceTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: semiBold,
